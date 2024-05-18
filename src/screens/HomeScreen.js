@@ -13,6 +13,10 @@ const Home = ({ navigation }) => {
         title="Ver Perfil"
         onPress={() => navigation.navigate('UserProfile')}
       />
+      <Button
+        title="Camera"
+        onPress={() => navigation.navigate('Camera')}
+      />
       {/* Adicione mais botões para outras telas, se necessário */}
     </View>
   );
