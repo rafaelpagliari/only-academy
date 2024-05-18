@@ -1,47 +1,23 @@
+// App.js
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './src/screens/HomeScreen';
+import SettingsScreen from './src/screens/SettingsScreen';
+import UserProfileScreen from './src/screens/UserProfileScreen';
 
-const TelaPerfil = () => {
-    return (
-        <View
-            style={{
-                flexDirection: 'row',
-                height: 100,
-                padding: 20,
-            }}>
+const Stack = createStackNavigator();
 
-            <View>
-                <TouchableOpacity>
-                    <Text>Botão Voltar</Text>
-                </TouchableOpacity>
-            </View>
-            <View>
-                <TouchableOpacity>
-                    <Text>Mensagem</Text>
-                </TouchableOpacity>
-            </View>
-            <View>
-                <View>  
-                    <Text>1k</Text>
-                    <Text>Followers</Text> 
-                </View>
-                <View>  
-                    <Text>342</Text>
-                    <Text>Following</Text> 
-                </View>
-
-                <Text>@RafaelPagliari</Text>
-                <Text>My name is Catherine. I like dancing in the rain and travelling all around the world.</Text>
-                <TouchableOpacity><Text>Follow</Text></TouchableOpacity>
-                <TouchableOpacity><Text>Message</Text></TouchableOpacity>
-
-                <TouchableOpacity><Text>All</Text></TouchableOpacity>
-                <TouchableOpacity><Text>Photos</Text></TouchableOpacity>
-                <TouchableOpacity><Text>Videos</Text></TouchableOpacity>
-            </View>
-        </View>
-    );
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Settings" component={SettingsScreen} />
+        <Stack.Screen name="UserProfile" component={UserProfileScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 };
 
-export default TelaPerfil;
-
+export default App;
