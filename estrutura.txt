@@ -1,0 +1,17 @@
+.
+├── App.js
+├── Gemfile
+├── Gemfile.lock
+├── TelaPerfil.js
+├── __tests__
+│   └── App-test.js
+├── app.json
+├── babel.config.js
+├── estrutura.txt
+├── index.js
+├── metro.config.js
+├── package-lock.json
+├── package.json
+└── src
+
+3 directories, 12 files
