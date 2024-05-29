@@ -1,3 +1,4 @@
+// src/screens/Home.js
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
@@ -17,7 +18,10 @@ const Home = ({ navigation }) => {
         title="Camera"
         onPress={() => navigation.navigate('Camera')}
       />
-      {/* Adicione mais botões para outras telas, se necessário */}
+      <Button
+        title="Go to Payment" // Novo botão para a tela de pagamento
+        onPress={() => navigation.navigate('Payment')}
+      />
     </View>
   );
 };

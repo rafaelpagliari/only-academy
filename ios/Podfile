@@ -26,6 +26,9 @@ target 'onlyacademy' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  # Adicione a dependência do Stripe abaixo
+  pod 'Stripe', '~> 21.0.1'
+
   target 'onlyacademyTests' do
     inherit! :complete
     # Pods for testing
@@ -41,3 +44,4 @@ target 'onlyacademy' do
     __apply_Xcode_12_5_M1_post_install_workaround(installer)
   end
 end
+
