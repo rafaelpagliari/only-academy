@@ -19,8 +19,16 @@ const Home = ({ navigation }) => {
         onPress={() => navigation.navigate('Camera')}
       />
       <Button
-        title="Go to Payment" // Novo botão para a tela de pagamento
+        title="Go to Payment"
         onPress={() => navigation.navigate('Payment')}
+      />
+      <Button
+        title="Profiles"
+        onPress={() => navigation.navigate('ProfileScreen')}
+      />
+      <Button
+        title="Posts"
+        onPress={() => navigation.navigate('PostScreen')}
       />
     </View>
   );
